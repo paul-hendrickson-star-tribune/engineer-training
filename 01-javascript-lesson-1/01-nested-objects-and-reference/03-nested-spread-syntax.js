@@ -3,6 +3,9 @@ const obj2 = { ...obj1 };
 
 obj1.nestedObj.property = "something new";
 
-const areTheSame = obj1.nestedObj.property === obj2.nestedObj.property;
+const areTheSameObject = obj1 === obj2;
+const haveTheSamePropertyReference =
+  obj2.nestedObj.property === obj1.nestedObj.property;
 
-console.log(areTheSame);
+console.log(`areTheSameObject: ${areTheSameObject}.`);
+console.log(`haveTheSamePropertyReference: ${haveTheSamePropertyReference}.`);
