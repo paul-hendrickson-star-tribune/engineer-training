@@ -1,0 +1,5 @@
+new Promise((res) => {
+  res("Hello, World!");
+}).then((data) => {
+  console.log(data);
+});
