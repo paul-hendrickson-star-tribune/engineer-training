@@ -20,16 +20,14 @@ callCallback(console.log);
  * Filtering example
  */
 
-const arrToBeFiltered1 = ["a", undefined, "b", false, "c", 0, "d", null, "e"];
+const arrToBeFiltered = ["a", undefined, "b", false, "c", 0, "d", null, "e"];
 
-const filteredArr1 = arrToBeFiltered1.filter((el) => !!el);
+const filteredArr1 = arrToBeFiltered.filter((el) => !!el);
 console.log(filteredArr1);
 
 /**
  * Can also be achieved with
  */
 
-const arrToBeFiltered2 = ["a", undefined, "b", false, "c", 0, "d", null, "e"];
-
-const filteredArr2 = arrToBeFiltered2.filter(Boolean);
+const filteredArr2 = arrToBeFiltered.filter(Boolean);
 console.log(filteredArr2);
