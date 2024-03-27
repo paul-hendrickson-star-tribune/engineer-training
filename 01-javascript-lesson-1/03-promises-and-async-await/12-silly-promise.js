@@ -7,22 +7,22 @@ class SillyPromise {
 
   constructor(cb) {
     cb(
-      (data) => {
+      (resolve) => {
         if (this.status !== "pending") return;
         this.status = "resolved";
         if (this.onSillyThen) {
-          this.onSillyThen(data);
+          this.onSillyThen(resolve);
         } else {
-          this.sillySuccessData = data;
+          this.sillySuccessData = resolve;
         }
       },
-      (data) => {
+      (reject) => {
         if (this.status !== "pending") return;
         this.status = "rejected";
         if (this.onSillyCatch) {
-          this.onSillyCatch(data);
+          this.onSillyCatch(reject);
         } else {
-          this.sillyCatchData = data;
+          this.sillyCatchData = reject;
         }
       }
     );
@@ -41,7 +41,7 @@ class SillyPromise {
   }
 }
 
-const thing = new SillyPromise((res, rej) => {
+new SillyPromise((res, rej) => {
   setTimeout(() => {
     rej("bad!");
   }, 1000);
