@@ -41,7 +41,7 @@ class SillyPromise {
   }
 }
 
-new SillyPromise((res, rej) => {
+const sillyPromise = new SillyPromise((res, rej) => {
   setTimeout(() => {
     rej("bad!");
   }, 1000);
@@ -52,3 +52,5 @@ new SillyPromise((res, rej) => {
   .sillyCatch((data) => {
     console.error(data);
   });
+
+console.log(sillyPromise);
