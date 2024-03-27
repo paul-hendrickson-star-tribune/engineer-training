@@ -7,7 +7,7 @@ console.log(positiveNums);
 function filterArr(arr, cb) {
   const myArray = [];
   for (let i = 0; i < arr.length; i++) {
-    cb(arr[i]) && myArray.push(arr[i]);
+    if (cb(arr[i])) myArray.push(arr[i]);
   }
   return myArray;
 }
