@@ -4,3 +4,5 @@ async function main() {
   });
   console.log(data);
 }
+
+main();
