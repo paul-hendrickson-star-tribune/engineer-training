@@ -11,8 +11,6 @@ function giveObject(cb) {
 }
 
 const nameAnObject = (someObject) => {
-  // THIS IS BAD! DO NOT MODIFY OBJECTS IN THIS WAY!
-  // BUT IT CAN BE DONE
   someObject.name = "paul";
 };
 
