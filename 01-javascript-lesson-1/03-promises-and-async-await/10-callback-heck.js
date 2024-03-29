@@ -18,14 +18,14 @@ function main() {
   const myNum = 1;
 
   timesTwoAsync(myNum)
-    .then((duplicated1) => {
-      return plusOneAsync(duplicated1).then((addedTo1) => {
-        return timesTwoAsync(addedTo1).then((duplicated2) => {
-          return plusOneAsync(duplicated2).then((addedTo2) => {
-            return timesTwoAsync(addedTo2).then((duplicated3) => {
-              return plusOneAsync(duplicated3).then((addedTo3) => {
-                return timesTwoAsync(addedTo3).then((duplicated4) => {
-                  return duplicated4;
+    .then((step1Duplicate) => {
+      return plusOneAsync(step1Duplicate).then((step2Add) => {
+        return timesTwoAsync(step2Add).then((step3Duplicate) => {
+          return plusOneAsync(step3Duplicate).then((step4Add) => {
+            return timesTwoAsync(step4Add).then((step5Duplicate) => {
+              return plusOneAsync(step5Duplicate).then((step6Add) => {
+                return timesTwoAsync(step6Add).then((step7Duplicate) => {
+                  return step7Duplicate;
                 });
               });
             });
