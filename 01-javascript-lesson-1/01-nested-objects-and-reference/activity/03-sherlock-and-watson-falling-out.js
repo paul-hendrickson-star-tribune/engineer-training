@@ -33,13 +33,6 @@ const newWatson = changeAddress(watson, {
   country: "USA",
 });
 
-/**
- * @template T extends { address: { street: string, city: string, country: string } }
- * @template T2 extends { street: string, city: string, country: string }
- * @param { T } person
- * @param { T2 } newAddress
- * @returns T & { address: T2 }
- */
 function changeAddress(person, newAddress) {
   /** Your code here */
   /** End code */
